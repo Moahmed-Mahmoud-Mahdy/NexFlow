@@ -4,10 +4,9 @@ import { motion } from "framer-motion";
 import { Check, Crown, Star, Infinity as InfinityIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { waLink, WA_MESSAGES } from "@/lib/contact";
 
-const WHATSAPP_LINK =
-  "https://wa.me/201000000000?text=" +
-  encodeURIComponent("أهلاً NexFlow 👋 عايز أعرف تفاصيل الاشتراك وأبدأ تجربة النظام");
+const WHATSAPP_LINK = waLink(WA_MESSAGES.pricing);
 
 const plans = [
   {

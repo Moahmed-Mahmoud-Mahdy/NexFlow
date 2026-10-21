@@ -24,3 +24,19 @@ Stage Summary:
 - Brand colors from logo implemented as Tailwind theme tokens (bg-nex-navy, nex-gradient-text etc.)
 - Pricing: 600 شهري / 6000 سنوي / 12000 مدى الحياة (all verified rendering in browser)
 - Placeholder contact: phone/WhatsApp 201000000000 & info@nexflow.app — user should replace with real numbers
+---
+Task ID: 2
+Agent: Z.ai Code (main)
+Task: Update phone number to 01101891846, remove email, replace footer "صُنع بـ" tagline with a creative one
+
+Work Log:
+- Created src/lib/contact.ts as single source of truth: PHONE_INTL (201101891846), PHONE_DISPLAY (0110 189 1846), PHONE_INTL_DISPLAY (110 189 1846), PHONE_TEL, waLink() builder + WA_MESSAGES presets
+- Refactored cta.tsx, pricing.tsx, whatsapp-float.tsx, footer.tsx to consume contact constants (removed all hardcoded 201000000000 links)
+- Footer: removed email row (info@nexflow.app) and Mail icon; kept WhatsApp + location; fixed international display format to "+20 110 189 1846"
+- Footer bottom bar: replaced "صُنع بـ ♥ في مصر" with creative tagline "ذكاء مصري ١٠٠٪… بيخلي أرباحك تتكلم 📈" using TrendingUp icon + gradient text
+- Verified: ESLint clean; grep confirms zero leftovers of old number/email; browser check — wa.me links point to 201101891846, tel: link = +201101891846, CTA button shows 0110 189 1846, footer renders correctly; fresh browser session shows zero console/page errors
+
+Stage Summary:
+- All contact info now centralized in src/lib/contact.ts (change number in one place only)
+- Live number: 01101891846 across 6 WhatsApp links + tel button + footer
+- Email fully removed; footer tagline is now witty brand line with gradient accent

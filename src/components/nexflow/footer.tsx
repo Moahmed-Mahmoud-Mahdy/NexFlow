@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, MessageCircle, Mail, Heart } from "lucide-react";
+import { MapPin, MessageCircle, TrendingUp } from "lucide-react";
+import { waLink, WA_MESSAGES, PHONE_INTL_DISPLAY } from "@/lib/contact";
 
 const quickLinks = [
   { href: "#features", label: "المميزات" },
@@ -58,7 +59,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm font-semibold">
               <li>
                 <a
-                  href="https://wa.me/201000000000"
+                  href={waLink(WA_MESSAGES.general)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 text-slate-400 transition-colors hover:text-nex-green-soft"
@@ -66,18 +67,7 @@ export function Footer() {
                   <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-nex-green/10 text-nex-green">
                     <MessageCircle className="h-4 w-4" aria-hidden />
                   </span>
-                  <span dir="ltr">+20 100 000 0000</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@nexflow.app"
-                  className="flex items-center gap-2.5 text-slate-400 transition-colors hover:text-nex-blue"
-                >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-nex-blue/10 text-nex-blue">
-                    <Mail className="h-4 w-4" aria-hidden />
-                  </span>
-                  info@nexflow.app
+                  <span dir="ltr">+20 {PHONE_INTL_DISPLAY}</span>
                 </a>
               </li>
               <li className="flex items-center gap-2.5 text-slate-400">
@@ -90,14 +80,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-center sm:flex-row sm:text-start">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-center sm:flex-row sm:text-start">
           <p className="text-xs font-semibold text-slate-500 sm:text-sm">
             © {new Date().getFullYear()} NexFlow — جميع الحقوق محفوظة.
           </p>
-          <p className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 sm:text-sm">
-            صُنع بـ
-            <Heart className="h-3.5 w-3.5 fill-nex-green text-nex-green" aria-hidden />
-            في مصر
+          <p className="flex items-center gap-1.5 text-xs font-bold text-slate-400 sm:text-sm">
+            <TrendingUp className="h-4 w-4 text-nex-green" aria-hidden />
+            <span>
+              ذكاء مصري ١٠٠٪… بيخلي
+              <span className="nex-gradient-text"> أرباحك تتكلم</span> 📈
+            </span>
           </p>
         </div>
       </div>

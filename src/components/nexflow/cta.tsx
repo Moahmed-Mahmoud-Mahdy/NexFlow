@@ -3,10 +3,9 @@
 import { motion } from "framer-motion";
 import { MessageCircle, PhoneCall, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { waLink, WA_MESSAGES, PHONE_TEL, PHONE_DISPLAY } from "@/lib/contact";
 
-const WHATSAPP_LINK =
-  "https://wa.me/201000000000?text=" +
-  encodeURIComponent("أهلاً NexFlow 👋 عايز أبدأ تجربة النظام");
+const WHATSAPP_LINK = waLink(WA_MESSAGES.start);
 
 export function Cta() {
   return (
@@ -82,9 +81,9 @@ export function Cta() {
             variant="outline"
             className="h-14 w-full rounded-2xl border-white/25 bg-white/5 px-8 text-lg font-bold text-white backdrop-blur transition-colors hover:bg-white/15 hover:text-white sm:w-auto"
           >
-            <a href="tel:+201000000000">
+            <a href={`tel:${PHONE_TEL}`}>
               <PhoneCall className="me-2 h-5 w-5" aria-hidden />
-              <span dir="ltr">0100 000 0000</span>
+              <span dir="ltr">{PHONE_DISPLAY}</span>
             </a>
           </Button>
         </motion.div>

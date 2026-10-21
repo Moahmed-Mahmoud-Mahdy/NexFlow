@@ -3,10 +3,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { waLink, WA_MESSAGES } from "@/lib/contact";
 
-const WHATSAPP_LINK =
-  "https://wa.me/201000000000?text=" +
-  encodeURIComponent("أهلاً NexFlow 👋 محتاج مساعدة");
+const WHATSAPP_LINK = waLink(WA_MESSAGES.general);
 
 export function WhatsAppFloat() {
   const [visible, setVisible] = useState(false);
