@@ -40,3 +40,25 @@ Stage Summary:
 - All contact info now centralized in src/lib/contact.ts (change number in one place only)
 - Live number: 01101891846 across 6 WhatsApp links + tel button + footer
 - Email fully removed; footer tagline is now witty brand line with gradient accent
+---
+Task ID: 3
+Agent: Z.ai Code (main)
+Task: Remove the baked-in border and black rounded-square background from the NexFlow logo image (make it transparent PNG)
+
+Work Log:
+- Analyzed upload/icon-512.png pixel structure with sharp: outer pure-black bg + rounded square with bright rim highlight (up to m=215 top/right) + dark ring + navy fill (#01152d-#0f2748); artwork darkest shading ~m=102 overlaps bg range
+- Chose deterministic pixel processing over AI image-edit to keep logo pixel-perfect
+- Wrote scripts-sample/remove-logo-background.ts (flood-fill + edge-scan band removal + iterative alpha propagation):
+  1) edge-scan detects square boundary; removes per-side bands (top 24px, right 24px, left 20px, bottom 14px — asymmetric because rim is brightest top/right, icons near bottom)
+  2) flood-fill from band + interior seeds (threshold max-channel<=85) removes navy fill, stops at artwork (darkest artwork m~102)
+  3) 30-pass alpha propagation (target curve m 90->0, 160->255, +28/step) eats rim glow remnants inward without touching artwork interior
+  4) stray-speck component cleanup (size<40 & maxM<150), trim, 28px transparent margin
+- Output: public/nexflow-logo-clean.png (412x473 RGBA) — verified clean on navy AND white composites
+- Hit Next.js image-optimizer + browser HTTP cache serving stale old asset under same filename; solved by renaming asset to nexflow-logo-clean.png and updating all 3 references
+- Removed rounded-* classes from hero/navbar/footer logo Images; switched to w-auto to preserve new aspect ratio; favicon (nexflow-icon.png) intentionally kept as original app icon for browser-tab clarity
+- Verified in browser: hero/navbar/footer show clean floating logo, zero console/page errors, lint clean
+
+Stage Summary:
+- Logo now transparent PNG: public/nexflow-logo-clean.png (favicon stays nexflow-icon.png with black bg on purpose)
+- Reprocessing script kept at scripts-sample/remove-logo-background.ts (source: upload/icon-512.png)
+- Hero mini-cards still overlay nicely on the now-transparent logo

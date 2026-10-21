@@ -54,11 +54,11 @@ export function Navbar() {
         {/* Logo */}
         <a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="flex items-center gap-2.5">
           <Image
-            src="/nexflow-logo.png"
+            src="/nexflow-logo-clean.png"
             alt="شعار NexFlow"
-            width={44}
-            height={44}
-            className="h-10 w-10 rounded-xl sm:h-11 sm:w-11"
+            width={41}
+            height={47}
+            className="h-10 w-auto sm:h-11"
             priority
           />
           <span className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">

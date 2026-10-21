@@ -160,12 +160,12 @@ export function Hero() {
             />
             <div className="nex-float relative">
               <Image
-                src="/nexflow-logo.png"
+                src="/nexflow-logo-clean.png"
                 alt="NexFlow — نظام إدارة نقاط البيع"
                 width={520}
-                height={520}
+                height={600}
                 priority
-                className="mx-auto w-full max-w-[320px] rounded-[2.5rem] drop-shadow-[0_25px_60px_rgba(46,155,240,0.35)] sm:max-w-[400px] lg:max-w-[460px]"
+                className="mx-auto w-full max-w-[300px] drop-shadow-[0_25px_60px_rgba(46,155,240,0.35)] sm:max-w-[380px] lg:max-w-[430px]"
               />
             </div>
 

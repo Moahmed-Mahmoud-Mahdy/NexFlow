@@ -20,11 +20,11 @@ export function Footer() {
           <div>
             <a href="#home" className="flex items-center gap-2.5">
               <Image
-                src="/nexflow-logo.png"
+                src="/nexflow-logo-clean.png"
                 alt="شعار NexFlow"
-                width={48}
-                height={48}
-                className="h-12 w-12 rounded-xl"
+                width={44}
+                height={51}
+                className="h-12 w-auto"
               />
               <span className="text-2xl font-extrabold text-white">
                 NEX<span className="nex-gradient-text">FLOW</span>
