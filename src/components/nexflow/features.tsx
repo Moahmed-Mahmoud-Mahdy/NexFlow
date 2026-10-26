@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   Printer,
   WifiOff,
-  Smartphone,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -98,7 +97,7 @@ export function Features() {
             ⚡ مميزات النظام
           </Badge>
           <h2 className="text-3xl font-black leading-snug text-nex-navy sm:text-4xl sm:leading-snug">
-            كل اللي محتجك لإدارة محلك
+            كل اللي محتاجه لإدارة محلك
             <span className="nex-gradient-text"> في مكان واحد</span>
           </h2>
           <p className="mt-4 text-base leading-8 text-slate-500 sm:text-lg sm:leading-8">
@@ -136,36 +135,6 @@ export function Features() {
             );
           })}
         </div>
-
-        {/* Mobile app strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-14 flex flex-col items-center justify-between gap-6 rounded-3xl bg-gradient-to-l from-nex-navy to-nex-navy-2 p-8 text-center sm:flex-row sm:p-10 sm:text-start"
-        >
-          <div className="flex items-center gap-5">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-tr from-nex-blue to-nex-green shadow-lg shadow-nex-blue/30">
-              <Smartphone className="h-8 w-8 text-nex-navy" aria-hidden />
-            </div>
-            <div>
-              <h3 className="text-xl font-extrabold text-white sm:text-2xl">
-                تابع محلك من موبايلك 📱
-              </h3>
-              <p className="mt-1.5 text-sm leading-7 text-slate-300 sm:text-base">
-                تطبيق NexFlow موبايل يخليك متابع مبيعاتك وأرباحك في أي لحظة —
-                حتى وانت مسافر.
-              </p>
-            </div>
-          </div>
-          <a
-            href="#pricing"
-            className="shrink-0 rounded-xl border border-nex-green/40 bg-nex-green/10 px-6 py-3 text-sm font-extrabold text-nex-green-soft transition-colors hover:bg-nex-green/20"
-          >
-            اعرف الأسعار ←
-          </a>
-        </motion.div>
       </div>
     </section>
   );

@@ -80,9 +80,9 @@ export function Hero() {
               custom={1}
               className="text-4xl font-black leading-[1.25] text-white sm:text-5xl xl:text-6xl xl:leading-[1.2]"
             >
-              نظام نقاط البيع والكاشير
+              نظام كاشير ونقاط بيع
               <span className="nex-shine-text"> لإدارة محلك </span>
-              مع <span className="nex-gradient-text">NexFlow</span>
+              من مكان واحد مع <span className="nex-gradient-text">NexFlow</span>
             </motion.h1>
 
             <motion.p
@@ -92,8 +92,8 @@ export function Hero() {
               custom={2}
               className="mx-auto mt-5 max-w-xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-9 lg:mx-0"
             >
-              نظام متكامل لإدارة المبيعات والمخزون والعملاء والتقارير يخدم المحلات والسوبر ماركت
-              والمطاعم والصيدليات — راقب مبيعاتك ومخزونك وعملائك وأرباحك من مكان واحد ومن أي جهاز.
+              راقب مبيعاتك، مخزونك، عملائك وأرباحك من مكان واحد ومن أي جهاز —
+              نظام متكامل يخدم المحلات والسوبر ماركت والمطاعم والصيدليات بكل سهولة.
             </motion.p>
 
             <motion.div
@@ -118,10 +118,21 @@ export function Hero() {
               >
                 <a href="#features">
                   <PlayCircle className="me-2 h-5 w-5" aria-hidden />
-                  اكتشف المميزات
+                  تعرف على المميزات
                 </a>
               </Button>
             </motion.div>
+
+            {/* Microcopy for WhatsApp-first flow */}
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              custom={3.5}
+              className="mt-3 text-xs font-semibold text-slate-400"
+            >
+              💬 سيتم توجيهك للواتساب لحجز عرضك التجريبي فوراً — مجاناً وبدون أي التزام
+            </motion.p>
 
             {/* Trust row */}
             <motion.div
@@ -129,11 +140,11 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               custom={4}
-              className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-300 lg:justify-start"
+              className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-300 lg:justify-start"
             >
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="h-4 w-4 text-nex-green" aria-hidden />
-                بدون التزام
+                جرب مجاناً بدون التزام
               </span>
               <span className="flex items-center gap-1.5">
                 <Receipt className="h-4 w-4 text-nex-blue" aria-hidden />
@@ -141,7 +152,7 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-1.5">
                 <Headset className="h-4 w-4 text-nex-green" aria-hidden />
-                دعم عربي ٢٤/٧
+                دعم عربي متواصل ٢٤/٧
               </span>
             </motion.div>
           </div>

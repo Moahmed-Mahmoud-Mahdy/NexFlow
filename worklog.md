@@ -62,3 +62,17 @@ Stage Summary:
 - Logo now transparent PNG: public/nexflow-logo-clean.png (favicon stays nexflow-icon.png with black bg on purpose)
 - Reprocessing script kept at scripts-sample/remove-logo-background.ts (source: upload/icon-512.png)
 - Hero mini-cards still overlay nicely on the now-transparent logo
+---
+Task ID: 4
+Agent: Antigravity
+Task: Document UX writing issues in UX_WRITING_ISSUES.md and update phone number to 01508051588
+
+Work Log:
+- Created UX_WRITING_ISSUES.md documenting all 15 UX writing issues, problems, and recommendations across Hero, CTAs, Pricing, FAQs, Tone & Consistency
+- Updated src/lib/contact.ts: PHONE_INTL = "201508051588", PHONE_DISPLAY = "0150 805 1588", PHONE_INTL_DISPLAY = "150 805 1588"
+- Updated README.md contact table and top links with the new number
+- Verified all components use centralized contact constants
+
+Stage Summary:
+- UX_WRITING_ISSUES.md added to root
+- Live phone number updated to 01508051588 across all WhatsApp links and tel buttons

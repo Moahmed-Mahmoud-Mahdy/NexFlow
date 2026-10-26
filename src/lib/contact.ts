@@ -4,13 +4,13 @@
  */
 
 /** الرقم بصيغة دولية بدون + (لروابط واتساب واتصال) */
-export const PHONE_INTL = "201101891846";
+export const PHONE_INTL = "201508051588";
 
 /** الرقم اللي بيظهر للمستخدم */
-export const PHONE_DISPLAY = "0110 189 1846";
+export const PHONE_DISPLAY = "0150 805 1588";
 
 /** الرقم بصيغة دولية للعرض (بدون الصفر الأول) */
-export const PHONE_INTL_DISPLAY = "110 189 1846";
+export const PHONE_INTL_DISPLAY = "150 805 1588";
 
 /** الرقم بصيغة tel: */
 export const PHONE_TEL = `+${PHONE_INTL}`;

@@ -72,7 +72,7 @@ export function Cta() {
               rel="noopener noreferrer"
             >
               <MessageCircle className="me-2 h-5 w-5" aria-hidden />
-              كلمنا واتساب
+              احجز عرض تجريبي عبر واتساب
             </a>
           </Button>
           <Button
@@ -87,6 +87,16 @@ export function Cta() {
             </a>
           </Button>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-4 text-xs font-semibold text-slate-400"
+        >
+          ✨ تواصل فوري ومباشر مع فريق الدعم — مجاناً وبدون أي التزام
+        </motion.p>
       </div>
     </section>
   );
