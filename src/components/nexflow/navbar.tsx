@@ -90,7 +90,7 @@ export function Navbar() {
           >
             <a href="#pricing" onClick={(e) => handleNavClick(e, "#pricing")}>
               <Sparkles className="me-1.5 h-4 w-4" aria-hidden />
-              ابدأ دلوقتي
+              احجز عرض تجريبي
             </a>
           </Button>
         </div>
@@ -148,7 +148,7 @@ export function Navbar() {
                       window.history.pushState(null, "", "#pricing");
                     }}
                   >
-                    ابدأ دلوقتي
+                    احجز عرض تجريبي
                   </a>
                 </Button>
               </li>

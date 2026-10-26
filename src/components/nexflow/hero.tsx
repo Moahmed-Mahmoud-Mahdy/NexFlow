@@ -14,9 +14,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const stats = [
-  { value: "+٢٠٠٠", label: "فاتورة يومياً" },
   { value: "+٥٠٠", label: "عميل سعيد" },
-  { value: "٩٩.٩٪", label: "وقت تشغيل النظام" },
+  { value: "سريع وسهل", label: "للتعلم والاستخدام" },
+  { value: "يعمل أوفلاين", label: "دون انقطاع" },
   { value: "٢٤/٧", label: "دعم فني متواصل" },
 ];
 
@@ -80,8 +80,8 @@ export function Hero() {
               custom={1}
               className="text-4xl font-black leading-[1.25] text-white sm:text-5xl xl:text-6xl xl:leading-[1.2]"
             >
-              إدارة أعمالك
-              <span className="nex-shine-text"> بنموذج ذكي </span>
+              نظام نقاط البيع والكاشير
+              <span className="nex-shine-text"> لإدارة محلك </span>
               مع <span className="nex-gradient-text">NexFlow</span>
             </motion.h1>
 
@@ -92,9 +92,8 @@ export function Hero() {
               custom={2}
               className="mx-auto mt-5 max-w-xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-9 lg:mx-0"
             >
-              نظام كاشير وإدارة نقاط بيع متكامل يخدم المحلات والسوبر ماركت
-              والمطاعم والصيدليات — راقب مبيعاتك ومخزونك وعملاءك وأرباحك، كل ده
-              في مكان واحد ومن أي مكان.
+              نظام متكامل لإدارة المبيعات والمخزون والعملاء والتقارير يخدم المحلات والسوبر ماركت
+              والمطاعم والصيدليات — راقب مبيعاتك ومخزونك وعملائك وأرباحك من مكان واحد ومن أي جهاز.
             </motion.p>
 
             <motion.div
@@ -109,7 +108,7 @@ export function Hero() {
                 size="lg"
                 className="h-14 w-full rounded-2xl bg-gradient-to-l from-nex-blue to-nex-green px-8 text-lg font-extrabold text-nex-navy shadow-xl shadow-nex-green/25 transition-transform hover:scale-[1.03] sm:w-auto"
               >
-                <a href="#pricing">ابدأ تجربتك دلوقتي</a>
+                <a href="#pricing">احجز عرض تجريبي مجانًا</a>
               </Button>
               <Button
                 asChild
@@ -134,7 +133,7 @@ export function Hero() {
             >
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="h-4 w-4 text-nex-green" aria-hidden />
-                بدون بطاقة ائتمانية
+                بدون التزام
               </span>
               <span className="flex items-center gap-1.5">
                 <Receipt className="h-4 w-4 text-nex-blue" aria-hidden />

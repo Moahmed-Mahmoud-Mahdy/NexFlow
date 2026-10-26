@@ -50,8 +50,8 @@ export function Cta() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mx-auto mt-4 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
         >
-          كلمنا دلوقتي على واتساب، وهنظبطلك تجربة كاملة للنظام على بياناتك —
-          من غير أي التزام. فرّقنا جنب النظام القديم وهتعرف الفرق بنفسك.
+          كلمنا دلوقتي على واتساب، وهنظبطلك عرض تجريبي كامل للنظام على بياناتك —
+          من غير أي التزام. جرب الفرق بين NexFlow والنظام القديم بنفسك.
         </motion.p>
 
         <motion.div
